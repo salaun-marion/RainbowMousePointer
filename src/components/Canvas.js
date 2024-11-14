@@ -1,6 +1,6 @@
 import { useDelayedValue } from '../fonctions/useDelayedValues';
 import { usePointerPosition } from '../fonctions/usePointerPosition';
-import Rainbow from './Rainbow';
+import Cercle from './Cercle';
 
 const rainbowColors = [
   'rgba(255, 0, 0, 1)',
@@ -78,9 +78,7 @@ export default function Canvas() {
   return (
     <>
       {rainbowColors.map((color, index) => {
-        return (
-          <Rainbow key={index} position={positions[index]} color={color} />
-        );
+        return <Cercle key={index} position={positions[index]} color={color} />;
       })}
     </>
   );
